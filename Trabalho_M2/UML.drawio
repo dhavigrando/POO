@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Claude" version="22.0.0">
+  <diagram name="UML M2" id="uml-m2">
+    <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Trabalho de Programação Orientada a Objetos, M2.&lt;br&gt;Sistema de contratação de serviços (marido de aluguel).&lt;br&gt;Integrantes do Grupo: Dhavi Ioshua Grando Da Silva e Felipe Scremin Bochnia." style="text;html=1;align=right;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="20" width="520" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="C_Imprimivel" value="&lt;i&gt;«interface»&lt;br&gt;Imprimivel&lt;/i&gt;&lt;hr&gt;&lt;hr&gt;&lt;i&gt;+ imprime(): void&lt;/i&gt;&lt;br&gt;+ ~Imprimivel()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="700" y="40" width="240" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="C_Pessoa" value="&lt;i&gt;Pessoa&lt;/i&gt;&lt;hr&gt;&lt;u&gt;- totalPessoas: int&lt;/u&gt;&lt;br&gt;- id: int&lt;br&gt;- nome: string&lt;br&gt;- cpf: string&lt;br&gt;- dataNascimento: string&lt;br&gt;- contato: Contato&lt;hr&gt;+ Pessoa(nome, cpf, dataNascimento, contato)&lt;br&gt;&lt;u&gt;+ proximoId(): int&lt;/u&gt;&lt;br&gt;&lt;u&gt;+ getTotal(): int&lt;/u&gt;&lt;br&gt;+ getNome(): string&lt;br&gt;+ imprime(): void&lt;br&gt;&lt;i&gt;+ tipo(): string&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="640" y="240" width="360" height="260" as="geometry" />
+        </mxCell>
+
+        <mxCell id="C_Contato" value="Contato&lt;hr&gt;- telefone: string&lt;br&gt;- email: string&lt;hr&gt;+ Contato(telefone, email)&lt;br&gt;+ Contato(telefone)&lt;br&gt;+ imprime(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="240" width="240" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="C_Habilidade" value="Habilidade&lt;hr&gt;- nome: string&lt;br&gt;- descricao: string&lt;hr&gt;+ Habilidade(nome, descricao)&lt;br&gt;+ getNome(): string&lt;br&gt;+ imprime(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="620" width="240" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="C_Cliente" value="Cliente&lt;hr&gt;- endereco: string&lt;br&gt;- necessidadeServico: string&lt;hr&gt;+ Cliente(nome, cpf, dataNascimento, contato, endereco, necessidadeServico)&lt;br&gt;+ tipo(): string&lt;br&gt;+ imprime(): void&lt;br&gt;+ toHTML(): string" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="320" y="600" width="300" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="C_Trabalhador" value="Trabalhador&lt;hr&gt;- profissao: string&lt;br&gt;- valorHora: float&lt;br&gt;- habilidades[MAX_HAB]: Habilidade*&lt;br&gt;- qtdHabilidades: int&lt;br&gt;- agenda: Agenda&lt;hr&gt;+ Trabalhador(nome, cpf, dataNascimento, contato, profissao, valorHora)&lt;br&gt;+ adicionarHabilidade(habilidade): void&lt;br&gt;+ contratar(d, m, a): bool&lt;br&gt;+ estaDisponivel(d, m, a): bool&lt;br&gt;+ imprimeAgenda(): void&lt;br&gt;+ tipo(): string&lt;br&gt;+ imprime(): void&lt;br&gt;+ toHTML(): string&lt;br&gt;+ ~Trabalhador()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="680" y="600" width="440" height="320" as="geometry" />
+        </mxCell>
+
+        <mxCell id="C_Agenda" value="Agenda&lt;hr&gt;- dia[MAX_DATAS]: int&lt;br&gt;- mes[MAX_DATAS]: int&lt;br&gt;- ano[MAX_DATAS]: int&lt;br&gt;- quantidade: int&lt;hr&gt;+ Agenda()&lt;br&gt;+ estaDisponivel(d, m, a): bool&lt;br&gt;+ reservar(d, m, a): bool&lt;br&gt;+ imprime(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="760" y="970" width="280" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="C_Contratacao" value="Contratacao&lt;hr&gt;- nomeCliente: string&lt;br&gt;- nomeTrabalhador: string&lt;br&gt;- descricaoServico: string&lt;br&gt;- dia: int&lt;br&gt;- mes: int&lt;br&gt;- ano: int&lt;br&gt;- status: string&lt;hr&gt;+ Contratacao(nomeCliente, nomeTrabalhador, descricaoServico, dia, mes, ano, status)&lt;br&gt;+ imprime(): void&lt;br&gt;+ toHTML(): string" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="600" width="260" height="240" as="geometry" />
+        </mxCell>
+
+        <mxCell id="H_PessoaImprimivel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_Pessoa" target="C_Imprimivel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_ContatoImprimivel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;" edge="1" parent="1" source="C_Contato" target="C_Imprimivel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_HabilidadeImprimivel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;" edge="1" parent="1" source="C_Habilidade" target="C_Imprimivel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_ContratacaoImprimivel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;" edge="1" parent="1" source="C_Contratacao" target="C_Imprimivel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_ClientePessoa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_Cliente" target="C_Pessoa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_TrabalhadorPessoa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_Trabalhador" target="C_Pessoa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="A_PessoaContato" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamondThin;startFill=1;startSize=14;endArrow=none;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_Pessoa" target="C_Contato">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A_PessoaContato_l1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_PessoaContato">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="A_PessoaContato_l2" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_PessoaContato">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="A_TrabAgenda" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamondThin;startFill=1;startSize=14;endArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_Trabalhador" target="C_Agenda">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A_TrabAgenda_l1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_TrabAgenda">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="A_TrabAgenda_l2" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_TrabAgenda">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="A_TrabHab" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamondThin;startFill=0;startSize=14;endArrow=none;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_Trabalhador" target="C_Habilidade">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A_TrabHab_l1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_TrabHab">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="A_TrabHab_l2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_TrabHab">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="A_CliCont" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_Cliente" target="C_Contratacao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A_CliCont_l1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_CliCont">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="A_CliCont_l2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_CliCont">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="A_TrabCont" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;exitX=0;exitY=0.6;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_Trabalhador" target="C_Contratacao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A_TrabCont_l1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_TrabCont">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="A_TrabCont_l2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="A_TrabCont">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="legend" value="&lt;b&gt;Legenda&lt;/b&gt;&lt;br&gt;&lt;i&gt;ItálicoNome&lt;/i&gt; = classe abstrata / interface&lt;br&gt;&lt;u&gt;Sublinhado&lt;/u&gt; = atributo/método static&lt;br&gt;&lt;i&gt;Itálico método&lt;/i&gt; = puro virtual&lt;br&gt;◆ losango cheio = composição&lt;br&gt;◇ losango vazio = agregação&lt;br&gt;△ triângulo vazio = herança" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="280" height="160" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
